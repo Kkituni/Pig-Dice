@@ -21,7 +21,7 @@ function newTurn(player){
 }
 Player.prototype.checkGameWinner = function () {
   if (this.cumulativeScore >= 100) {
-    alert(this.name + " Wins the game");
+    alert(this.name + " Wins the game with "+ this.cumulativeScore + ' points');
     endGame();
   }
 }
