@@ -76,3 +76,19 @@ function setActivePlayer(activePlayer){
   newTurn(activePlayer);
   $('#game-instructions').html("It's now " +activePlayer.name + "'s turn");
 }
+function newGame(){
+  player1 = new Player();
+  player2 = new Player();
+
+  player1.name  = prompt("Please enter Player 1's name", "Player 1");
+  player2.name  = prompt("Please enter Player 2's name", "Player 2");
+
+  $('#player-info').html(player1.name + ' vs ' + player2.name);
+
+  $('#game-controls').css('display','block');
+
+  $('#player2Controls').css('display','none');
+
+  $('#game-instructions').html(player1.name + ' starts the game. Please roll the dice');
+
+}
