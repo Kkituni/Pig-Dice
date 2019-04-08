@@ -54,3 +54,13 @@ Player.prototype.rollDice = function(){
     this.checkOne();
     this.checkGameWinner();
 }
+Player.prototype.holdGame = function(){
+  var activePlayer = this;
+  if(this == player1){
+        activePlayer = player2;
+    }
+    else{
+      activePlayer = player1;
+    }
+    setActivePlayer(activePlayer);
+}
