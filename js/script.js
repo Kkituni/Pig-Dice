@@ -33,3 +33,24 @@ Player.prototype.checkOne = function () {
     this.holdGame();
   }
 }
+function endGame(){
+  $('#player-info').html('');
+
+  $('#game-controls').css('display','none');
+
+
+  $('#game-instructions').html('');
+}
+
+Player.prototype.rollDice = function(){
+    this.roll = singleRoll();
+    this.currentScore += this.roll;
+    this.cumulativeScore += this.roll;
+
+    $('#tempScore').html(this.roll);
+    $('#currentScore').html(this.currentScore);
+    $('#totalScore').html(this.cumulativeScore);
+
+    this.checkOne();
+    this.checkGameWinner();
+}
