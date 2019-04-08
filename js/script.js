@@ -92,3 +92,26 @@ function newGame(){
   $('#game-instructions').html(player1.name + ' starts the game. Please roll the dice');
 
 }
+$(document).ready(function() {
+    $("#btnNewGame").click(function(){
+        newGame();
+    });
+
+    $("#btnPlayer1Roll").click(function(){
+        player1.rollDice();
+    });
+
+    $("#btnPlayer1Hold").click(function(){
+        player1.holdGame();
+    });
+
+     $("#btnPlayer2Roll").click(function(){
+        player2.rollDice();
+    });
+
+    $("#btnPlayer2Hold").click(function(){
+        player2.holdGame();
+    });
+
+
+});
