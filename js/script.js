@@ -64,3 +64,15 @@ Player.prototype.holdGame = function(){
     }
     setActivePlayer(activePlayer);
 }
+function setActivePlayer(activePlayer){
+  if(activePlayer == player1){
+    $('#player1Controls').css('display','block');
+    $('#player2Controls').css('display','none');
+  }
+  else{
+    $('#player1Controls').css('display','none');
+    $('#player2Controls').css('display','block');
+  }
+  newTurn(activePlayer);
+  $('#game-instructions').html("It's now " +activePlayer.name + "'s turn");
+}
